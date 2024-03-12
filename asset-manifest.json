@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/vk-test-community/static/css/main.36030be3.css",
+    "main.js": "/vk-test-community/static/js/main.ecfb9d35.js",
+    "index.html": "/vk-test-community/index.html",
+    "main.36030be3.css.map": "/vk-test-community/static/css/main.36030be3.css.map",
+    "main.ecfb9d35.js.map": "/vk-test-community/static/js/main.ecfb9d35.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.36030be3.css",
+    "static/js/main.ecfb9d35.js"
+  ]
+}
