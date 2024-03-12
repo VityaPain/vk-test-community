@@ -15,13 +15,16 @@
 
         &__item {
             font-size: 14px;
+            
+            display: flex;
+            column-gap: 5px;
+            align-self: flex-end;
+            align-items: center;
         }
     }
 }
 
 .friend {
     align-self: flex-end;
-    display: flex;
     align-items: center;
-    column-gap: 5px;
 }

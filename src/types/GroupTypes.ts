@@ -17,4 +17,4 @@ export interface User {
     "last_name": string
 }
 
-export type ColorFilterType = 'red' | 'green' | 'yellow' | 'blue' | 'purple' | 'white' | 'orange' | ''
+export type ColorFilterType = 'red' | 'green' | 'yellow' | 'blue' | 'purple' | 'white' | 'orange' | '' | undefined

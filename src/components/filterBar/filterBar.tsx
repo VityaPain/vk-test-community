@@ -18,6 +18,10 @@ const FilterBar = () => {
                                     : 'all'
     }
 
+    const getUndefined = (string) => {
+        return string === 'undefined' ? undefined : string
+    }
+
     const handleChangeFriends = (e) => {
         dispatch(setFriendFilter(e.target.checked))
     }
@@ -27,7 +31,7 @@ const FilterBar = () => {
     }
 
     const handleChangepColor = (e) => {
-        dispatch(setColorFilter(e.target.value))
+        dispatch(setColorFilter(getUndefined(e.target.value)))
     }
 
     return (
@@ -39,6 +43,7 @@ const FilterBar = () => {
                     <input onChange={(e) => handleChangeFriends(e)} type="checkbox"></input>
                 </li>
                 <li className="header-filters__item privacy">
+                    <span>Тип приватности: </span>
                     <select
                         onChange={(e) => handleChangepPrivacy(e)}
                     >
@@ -48,6 +53,7 @@ const FilterBar = () => {
                     </select>
                 </li>
                 <li className="header-filters__item color">
+                    <span>Аватар:</span>
                     <select
                         onChange={(e) => handleChangepColor(e)}
                     >
@@ -58,6 +64,7 @@ const FilterBar = () => {
                         <option value="blue">Голубой</option>
                         <option value="purple">Фиолетовый</option>
                         <option value="white">Белый</option>
+                        <option value="undefined">Отсутствует</option>
                     </select>
                 </li>
             </ul>
