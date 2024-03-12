@@ -31,6 +31,13 @@ export const slice = createSlice({
         },
         setColorFilter: (state, { payload } : { payload: ColorFilterType }) => {
             state.filterOption = {...state.filterOption, color: payload}
+        },
+        resetFilter: (state) => {
+            state.filterOption = {
+                friend: false,
+                private: 'all',
+                color: ''
+            }
         }
     }
 })
@@ -38,7 +45,8 @@ export const slice = createSlice({
 export const { 
     setFriendFilter, 
     setPrivacyFilter,
-    setColorFilter
+    setColorFilter,
+    resetFilter
 } = slice.actions
 
 export const selectFilterOption = (state: RootState) => state.filter.filterOption

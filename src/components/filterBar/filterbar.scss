@@ -24,7 +24,11 @@
     }
 }
 
-.friend {
-    align-self: flex-end;
-    align-items: center;
+.reset {
+    cursor: pointer;
+
+    &:hover {
+        color: red;
+        text-decoration: underline;
+    }
 }

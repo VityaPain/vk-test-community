@@ -2,7 +2,8 @@ import { useDispatch } from "react-redux"
 import { 
     setFriendFilter,
     setPrivacyFilter,
-    setColorFilter 
+    setColorFilter,
+    resetFilter 
 } from "../redux/filterSlice"
 
 import "./filterbar.scss"
@@ -38,6 +39,12 @@ const FilterBar = () => {
         <header className="header">
             <p className="header__title">Фильтры</p>
             <ul className="header-filters">
+                <li 
+                    className="header-filters__item reset"
+                    onClick={() => dispatch(resetFilter())}
+                >
+                    Сбросить
+                </li>
                 <li className="header-filters__item friend">
                     <span>Друзья</span>
                     <input onChange={(e) => handleChangeFriends(e)} type="checkbox"></input>
